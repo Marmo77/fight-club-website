@@ -1,23 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "../ui/button";
 import { Menu, PawPrint, X } from "lucide-react";
-
-interface navItemsProps {
-  label: string;
-  href: string;
-}
-
-const navItems: navItemsProps[] = [
-  { label: "O klubie", href: "#about" },
-  { label: "Trenerzy", href: "#trainers" },
-  { label: "Grafik", href: "#schedule" },
-  { label: "Cennik", href: "#pricing" },
-  { label: "Kontakt", href: "#contact" },
-];
-
+import { PageData } from "@/data/pageData";
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const { navigation } = PageData;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,14 +28,17 @@ const Navbar = () => {
           <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white group-hover:scale-110 transition-transform">
             <PawPrint />
           </div>
-          <span className="text-xl font-heading tracking-tight uppercase">
-            <span className="text-primary font-bold pr-1">Taurus</span> Goleniów
+          <span className="text-xl font-heading -tracking-tight uppercase">
+            <span className="text-primary font-bold pr-1">
+              {navigation.name.split(" ")[0]}
+            </span>{" "}
+            {navigation.name.split(" ")[1]}
           </span>
         </a>
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-6">
-          {navItems.map((item) => (
+          {navigation.items.map((item) => (
             <a
               key={item.href}
               href={item.href}
@@ -75,7 +66,7 @@ const Navbar = () => {
         {/* Mobile navmenu */}
         {isOpen && (
           <nav className="lg:hidden absolute top-full left-0 right-0 bg-background border-b border-primary/60 flex flex-col p-6 gap-3 shadow-2xl shadow-primary/10">
-            {navItems.map((item) => (
+            {navigation.items.map((item) => (
               <a
                 key={item.href}
                 onClick={() => setIsOpen(false)}

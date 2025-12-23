@@ -1,6 +1,32 @@
 import type { PageDataProps } from "@/types/types";
 
 export const PageData: PageDataProps = {
+  site: {
+    name: "TAURUS SZCZECIN",
+    city: "SZCZECIN",
+    address: "ul. Portowa 7, 70-000 Szczecin",
+    phone: "+48 600 987 654",
+    email: "kontakt@fightcorner.pl",
+    socials: {
+      facebook: "https://facebook.com/szczecinfightcorner",
+      instagram: "https://instagram.com/szczecinfightcorner",
+    },
+    openingHours: {
+      weekdays: "PON-PT: 16:30-20:30",
+      weekends: "SOB-NDZ: Nieczynne",
+    },
+  },
+  navigation: {
+    name: "TAURUS SZCZECIN",
+    items: [
+      { label: "O klubie", href: "#about" },
+      { label: "Trenerzy", href: "#trainers" },
+      { label: "Grafik", href: "#schedule" },
+      { label: "Cennik", href: "#pricing" },
+      { label: "Kontakt", href: "#contact" },
+    ],
+  },
+
   hero: {
     title: "BOKS I KICKBOXING W SZCZECINIE.",
     subtitle:

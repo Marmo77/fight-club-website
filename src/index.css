@@ -45,7 +45,7 @@
   --popover-foreground: oklch(0.98 0.01 240);
 
   /* Primary: Rose Red #E11D48 */
-  --primary: oklch(0.58 0.23 15);
+  --primary: #e11d48;
   --primary-foreground: oklch(1 0 0);
 
   /* Secondary: Orange #F97316 */
@@ -67,15 +67,9 @@
 
   --chart-1: oklch(0.58 0.23 15);
   --chart-2: oklch(0.75 0.18 50);
-  --chart-3: oklch(0.45 0.15 200);
+  --chart-3: oklch(75.813% 0.24185 141.17);
   --chart-4: oklch(0.8 0.1 100);
   --chart-5: oklch(0.6 0.2 300);
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
 }
 
 @media (prefers-color-scheme: light) {
@@ -129,8 +123,11 @@ body {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground selection:bg-primary/95;
     font-feature-settings: "rlig" 1, "calt" 1;
+    margin: 0;
+    padding: 0;
+    display: block;
   }
 
   /* Smooth Scroll globally */

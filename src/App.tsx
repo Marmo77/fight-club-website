@@ -1,14 +1,14 @@
 import { Route, Routes } from "react-router-dom";
-import Test from "./components/Test";
 import NotFound from "./components/NotFound";
 import Layout from "./components/Layout/Layout";
+import Home from "./components/Home/Home";
 
 function App() {
   return (
     <>
       <Routes>
         <Route element={<Layout />}>
-          <Route index path="/" element={<Test />} />
+          <Route index path="/" element={<Home />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>

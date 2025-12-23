@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 const Test = () => {
   const [count, setCount] = useState(0);
   return (
-    <div className="flex flex-col mx-auto w-screen justify-center items-center h-screen">
+    <div className="flex flex-col pt-24 mx-auto max-w-6xl justify-center items-center">
       <div className="flex flex-col items-center gap-2">
         <h1>FC {count}</h1>
         <h1 className="text-3xl text-red-500"> {count}</h1>
@@ -19,6 +19,26 @@ const Test = () => {
           >
             Decrement
           </Button>
+        </div>
+        <div className="flex flex-col gap-12">
+          <h1 className="font-sans">Test text 123 font </h1>
+          <h1 className="font-heading">Test text 123 font </h1>
+          <h1 className="font-secondary">Test text 123 font </h1>
+          <h1 className="font-secondary">Test text 123 font </h1>
+          <h1 className="font-secondary">Test text 123 font </h1>
+          <h1 className="font-secondary">Test text 123 font </h1>
+          <h1 className="font-secondary">Test text 123 font </h1>
+          <h1 className="font-secondary">Test text 123 font </h1>
+          <h1 className="font-secondary">Test text 123 font </h1>
+          <h1 className="font-secondary">Test text 123 font </h1>
+          <h1 className="font-secondary">Test text 123 font </h1>
+          <h1 className="font-secondary">Test text 123 font </h1>
+          <h1 className="font-secondary">Test text 123 font </h1>
+          <h1 className="font-secondary">Test text 123 font </h1>
+          <h1 className="font-secondary">Test text 123 font </h1>
+          <h1 className="font-secondary">Test text 123 font </h1>
+          <h1 className="font-secondary">Test text 123 font </h1>
+          <h1 className="font-secondary">Test text 123 font </h1>
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@ import React from "react";
 import { PageData } from "@/data/pageData";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
-import { Star, StarIcon } from "lucide-react";
+import { StarIcon } from "lucide-react";
 
 const Hero = () => {
   const { hero } = PageData;
@@ -31,7 +31,7 @@ const Hero = () => {
             <Badge
               key={index}
               variant={"hero"}
-              className="text-xs uppercase tracking-wider font-bold font-sans"
+              className="text-xs uppercase tracking-wider font-bold font-sans select-none"
             >
               {tag}
             </Badge>

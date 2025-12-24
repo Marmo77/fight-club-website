@@ -35,8 +35,18 @@ export interface HeroInfoBarProps {
   weekends: string;
   firstTraining: string;
 }
+export interface TrainerProps {
+  id: number;
+  name: string;
+  role: string;
+  image: string;
+  bioShort: string;
+  highlights?: string[];
+}
+
 export interface PageDataProps {
   site: SiteDataProps;
   hero: HeroDataProps;
   navigation: NavigationDataProps;
+  trainers: TrainerProps[];
 }

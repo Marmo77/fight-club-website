@@ -30,7 +30,7 @@ export const PageData: PageDataProps = {
   hero: {
     title: "BOKS I KICKBOXING W SZCZECINIE.",
     subtitle:
-      "Trenuj w kameralnym klubie sportów walki w centrum Szczecina – pod okiem trenerów Lyoshy i Iskandera. Pierwszy trening zawsze ZA DARMO.",
+      "Trenuj w kameralnym klubie sportów walki w centrum Szczecina – pod okiem trenerów Lyoshy i Iskandera. Pierwszy trening grupowy zawsze ZA DARMO.",
     primaryCTA: {
       label: "ZACZNIJ TRENOWAĆ",
       targetId: "about",
@@ -118,6 +118,7 @@ export const PageData: PageDataProps = {
         "Pracuje z najlepszymi",
         "30 lat doświadczenia",
       ],
+      contact: { phone: "+48 600 111 222", email: "radek@fightcorner.pl" },
     },
     {
       id: 2,
@@ -132,6 +133,7 @@ export const PageData: PageDataProps = {
         "Certyfikowana dietetyczka",
         "15 lat doświadczenia",
       ],
+      contact: { phone: "+48 600 111 222", email: "martyna@fightcorner.pl" },
     },
   ],
 };

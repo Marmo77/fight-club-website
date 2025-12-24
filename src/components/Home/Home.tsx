@@ -1,4 +1,3 @@
-import React from "react";
 import Hero from "./Hero";
 import Test from "../Test";
 import Trainers from "./Trainers";

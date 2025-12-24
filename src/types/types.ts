@@ -42,6 +42,10 @@ export interface TrainerProps {
   image: string;
   bioShort: string;
   highlights?: string[];
+  contact?: {
+    phone: string;
+    email: string;
+  };
 }
 
 export interface PageDataProps {

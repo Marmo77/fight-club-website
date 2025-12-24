@@ -64,4 +64,34 @@ export const PageData: PageDataProps = {
       firstTraining: "Pierwszy trening za darmo",
     },
   },
+  trainers: [
+    {
+      name: "Lyosha",
+      role: "Trener kickboxingu / K-1",
+      bioShort:
+        "Doświadczony zawodnik i trener kickboxingu K-1. Specjalista od dynamiki i precyzyjnych kopnięć.",
+      highlights: [
+        "Ponad 5 lat doświadczenia trenerskiego",
+        "Wielokrotne starty w turniejach K-1",
+        "Nacisk na technikę i bezpieczeństwo",
+      ],
+      image:
+        "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=800",
+      contact: { phone: "+48 600 111 222", email: "lyosha@fightcorner.pl" },
+    },
+    {
+      name: "Iskander",
+      role: "Trener boksu",
+      bioShort:
+        "Specjalista od szermierki na pięści. Jego treningi to połączenie klasycznej szkoły boksu z nowoczesną metodyką.",
+      highlights: [
+        "Ponad 10 lat na sali bokserskiej",
+        "Przygotowanie pod starty amatorskie",
+        "Cierpliwość do początkujących",
+      ],
+      image:
+        "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=800",
+      contact: { phone: "+48 600 333 444", email: "iskander@fightcorner.pl" },
+    },
+  ],
 };

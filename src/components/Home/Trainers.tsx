@@ -61,7 +61,7 @@ const Trainers = () => {
         open={!!selectedTrainer}
         onOpenChange={(open) => !open && setSelectedTrainer(null)}
       >
-        <DialogContent className="bg-background w-full max-w-md rounded-2xl border-border overflow-hidden shadow-2xl shadow-primary/10 p-0 gap-0">
+        <DialogContent className="bg-background max-w-md max-sm:max-w-sm rounded-2xl border-border overflow-hidden shadow-2xl shadow-primary/10 p-0 gap-0">
           <div className="sr-only">
             <DialogHeader>
               <DialogTitle>Kontakt z trenerem</DialogTitle>

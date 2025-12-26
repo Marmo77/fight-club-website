@@ -178,7 +178,7 @@ const TrainerCard = ({
       {/* Glow effect in background on hover */}
       <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-      <div className="aspect-3/4 overflow-hidden relative">
+      <div className="aspect-3/4 max-h-[525px] overflow-hidden relative">
         <img
           src={trainer.image}
           alt={trainer.name}

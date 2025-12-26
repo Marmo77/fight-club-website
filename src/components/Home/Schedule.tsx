@@ -66,7 +66,7 @@ const ScheduleCard = ({
   groups: GroupSchedule[];
 }) => {
   return (
-    <Card className="bg-card/30 border hover:-translate-y-0.5 border-border rounded-3xl flex flex-col group hover:border-primary/20 transition-all duration-300">
+    <Card className="bg-card/30 hover:-translate-y-0.5 border-border rounded-3xl flex flex-col group hover:border-primary/20 transition-all duration-300">
       <CardHeader className="bg-card-foreground/10 py-3 border-border rounded-t-2xl group-hover:bg-primary/5 transition-colors">
         <h3 className="font-heading text-primary-foreground font-bold uppercase text-xl tracking-tight text-center group-hover:text-primary transition-colors">
           {title}

@@ -1,4 +1,4 @@
-import type { PageDataProps } from "@/types/types";
+import type { PageDataProps, ScheduleData } from "@/types/types";
 
 export const PageData: PageDataProps = {
   site: {
@@ -137,3 +137,84 @@ export const PageData: PageDataProps = {
     },
   ],
 };
+
+export const scheduleData: ScheduleData = [
+  {
+    title: "Poniedziałek",
+    groups: [
+      {
+        title: "Boks Kids",
+        time: "16:30 - 17:30",
+      },
+      {
+        title: "Grupa młodzieżowa",
+        time: "17:30 - 18:30",
+      },
+
+      {
+        title: "Grupa Otwarta (+18)",
+        time: "19:00 - 20:30",
+      },
+    ],
+  },
+  {
+    title: "Wtorek",
+    groups: [
+      {
+        title: "Sparingi",
+        time: "17:00 - 18:30",
+      },
+      {
+        title: "Kickboxing",
+        time: "19:00 - 20:30",
+      },
+      {
+        title: "Boks Kobiet",
+        time: "20:30 - 21:30",
+      },
+    ],
+  },
+  {
+    title: "Środa",
+    groups: [
+      {
+        title: "Boks Kids",
+        time: "16:30 - 17:30",
+      },
+      {
+        title: "Grupa młodzieżowa",
+        time: "17:30 - 18:30",
+      },
+      {
+        title: "Grupa Otwarta (+18)",
+        time: "19:00 - 20:30",
+      },
+    ],
+  },
+  {
+    title: "Czwartek",
+    groups: [
+      {
+        title: "Grupa Młodzieżowa",
+        time: "17:30 - 18:30",
+      },
+      {
+        title: "Kickboxing",
+        time: "19:00 - 20:30",
+      },
+      {
+        title: "Boks Kobiet",
+        time: "20:30 - 21:30",
+      },
+    ],
+  },
+  {
+    title: "Piątek",
+    groups: [
+      {
+        title: "Trening funkcjonalny",
+        time: "17:30 - 18:30",
+      },
+    ],
+  },
+];

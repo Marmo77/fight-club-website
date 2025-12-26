@@ -1,9 +1,9 @@
-import React from "react";
 import { Card, CardContent, CardHeader } from "../ui/card";
-import { scheduleData } from "@/data/pageData";
+import { PageData, scheduleData } from "@/data/pageData";
 import type { GroupSchedule } from "@/types/types";
 
 const Schedule = () => {
+  const { site } = PageData;
   return (
     <section
       id="schedule"
@@ -25,6 +25,35 @@ const Schedule = () => {
           <ScheduleCard title={day.title} groups={day.groups} />
         ))}
       </div>
+      {/* Bonus Info */}
+      <div className="mt-16 max-w-4xl mx-auto text-center space-y-4">
+        <div className="h-px w-full bg-linear-to-r from-transparent via-white/10 to-transparent mb-8"></div>
+        <p className="text-muted-foreground text-sm leading-relaxed font-medium">
+          Treningi mogą ulec zmianie lub zostać odwołane (szczególnie w dni
+          świąteczne). Prosimy o bieżące śledzenie naszych{" "}
+          <a
+            href={site.socials.facebook}
+            className="text-primary font-bold underline underline-offset-4 decoration-primary/40 hover:decoration-primary transition-all"
+          >
+            SOCIAL MEDIA
+          </a>
+          , gdzie publikujemy najnowsze informacje i komunikaty dla klubowiczów.
+        </p>
+        <div className="flex justify-center gap-6 pt-4">
+          <a
+            href={site.socials.facebook}
+            className="text-[10px] font-black uppercase tracking-widest text-muted hover:text-primary transition-colors"
+          >
+            Facebook
+          </a>
+          <a
+            href={site.socials.instagram}
+            className="text-[10px] font-black uppercase tracking-widest text-muted hover:text-primary transition-colors"
+          >
+            Instagram
+          </a>
+        </div>
+      </div>
     </section>
   );
 };
@@ -37,9 +66,9 @@ const ScheduleCard = ({
   groups: GroupSchedule[];
 }) => {
   return (
-    <Card className="bg-card/40 border border-border rounded-3xl flex flex-col group hover:border-primary/20 transition-all duration-300">
+    <Card className="bg-card/30 border hover:-translate-y-0.5 border-border rounded-3xl flex flex-col group hover:border-primary/20 transition-all duration-300">
       <CardHeader className="bg-card-foreground/10 py-3 border-border rounded-t-2xl group-hover:bg-primary/5 transition-colors">
-        <h3 className="font-heading text-primary-foreground font-semibold uppercase text-xl tracking-tight text-center group-hover:text-primary transition-colors">
+        <h3 className="font-heading text-primary-foreground font-bold uppercase text-xl tracking-tight text-center group-hover:text-primary transition-colors">
           {title}
         </h3>
       </CardHeader>

@@ -54,3 +54,16 @@ export interface PageDataProps {
   navigation: NavigationDataProps;
   trainers: TrainerProps[];
 }
+
+// SCHEDULES
+export interface GroupSchedule {
+  title: string;
+  time: string;
+}
+
+export interface DaySchedule {
+  title: string;
+  groups: GroupSchedule[];
+}
+
+export type ScheduleData = DaySchedule[];

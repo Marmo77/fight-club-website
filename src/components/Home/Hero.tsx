@@ -39,12 +39,12 @@ const Hero = () => {
         </div>
 
         {/* Title */}
-        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-[88px] max-md:text-center font-heading font-black uppercase leading-[0.9] tracking-tighter max-w-4xl text-white mb-6">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-[88px] max-md:text-center font-heading font-black uppercase leading-[0.9] tracking-tighter max-w-4xl text-primary-foreground mb-6">
           {hero.title}
         </h1>
 
         {/* Subtitle */}
-        <p className="text-sm sm:text-base px-2 md:text-lg text-gray-300 max-md:text-center max-w-2xl mb-10 leading-relaxed font-medium">
+        <p className="text-sm font- sm:text-base px-2 md:text-lg text-muted-foreground max-md:text-center max-w-2xl mb-10 leading-relaxed font-medium">
           {hero.subtitle}
         </p>
 

@@ -32,7 +32,7 @@ const Schedule = () => {
           Treningi mogą ulec zmianie lub zostać odwołane (szczególnie w dni
           świąteczne). Prosimy o bieżące śledzenie naszych{" "}
           <a
-            href={site.socials.facebook}
+            href={site.socials[0].href}
             className="text-primary font-bold underline underline-offset-4 decoration-primary/40 hover:decoration-primary transition-all"
           >
             SOCIAL MEDIA
@@ -40,18 +40,17 @@ const Schedule = () => {
           , gdzie publikujemy najnowsze informacje i komunikaty dla klubowiczów.
         </p>
         <div className="flex justify-center gap-6 pt-4">
-          <a
-            href={site.socials.facebook}
-            className="text-[10px] font-black uppercase tracking-widest text-muted hover:text-primary transition-colors"
-          >
-            Facebook
-          </a>
-          <a
-            href={site.socials.instagram}
-            className="text-[10px] font-black uppercase tracking-widest text-muted hover:text-primary transition-colors"
-          >
-            Instagram
-          </a>
+          {site.socials.map((social) => (
+            <a
+              key={social.label}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[10px] font-black uppercase tracking-widest text-muted hover:text-primary transition-colors"
+            >
+              {social.label}
+            </a>
+          ))}
         </div>
       </div>
     </section>

@@ -1,7 +1,15 @@
 import { PageData } from "@/data/pageData";
 
+interface SocialsProps {
+  label: string;
+  href: string;
+}
 const Footer = () => {
   const { site } = PageData;
+  const socials: SocialsProps[] = site.socials.map((social) => ({
+    label: social.label,
+    href: social.href,
+  }));
   return (
     <footer id="footer" className="border-t border-border mt-4 pt-2">
       <div className="container py-14 px-8 md:px-16 mx-auto text-left">
@@ -30,7 +38,7 @@ const Footer = () => {
           {/* Socials */}
           <FooterSection
             title="Social Media"
-            content={[site.socials.facebook, site.socials.instagram]}
+            content={socials}
             type="socials"
           />
         </div>
@@ -49,7 +57,7 @@ const FooterSection = ({
   type,
 }: {
   title: string;
-  content: string[];
+  content: string[] | SocialsProps[];
   type: "contact" | "openingHours" | "socials";
 }) => {
   const prefix = (item: string) => {
@@ -64,7 +72,7 @@ const FooterSection = ({
       </h4>
       {type === "contact" && (
         <div className="flex flex-col text-xs pl-1 gap-0.5 text-muted-foreground">
-          {content.map((item, index) => (
+          {(content as string[]).map((item, index) => (
             <a
               key={index}
               href={prefix(item)}
@@ -86,7 +94,7 @@ const FooterSection = ({
       )}
       {type === "openingHours" && (
         <div className="flex flex-col text-xs pl-1 text-muted-foreground">
-          {content.map((item, index) => (
+          {(content as string[]).map((item, index) => (
             <p
               key={index}
               className="flex gap-1 text-primary-foreground font-semibold"
@@ -100,17 +108,19 @@ const FooterSection = ({
         </div>
       )}
       {type === "socials" && (
-        <div className="flex flex-col text-xs pl-1 text-muted-foreground">
-          {content.map((item, index) => (
-            <p
+        <div className="flex flex-col items-center text-xs gap-1 pl-1 text-muted-foreground">
+          {(content as SocialsProps[]).map((item, index) => (
+            <a
               key={index}
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex gap-1 text-primary-foreground font-semibold"
             >
-              <span>{item.split(" ")[0]}</span>
               <span className="text-muted-foreground hover:text-primary duration-500 transition-colors cursor-pointer font-medium">
-                {item.split(" ")[1]}
+                {item.label}
               </span>
-            </p>
+            </a>
           ))}
         </div>
       )}

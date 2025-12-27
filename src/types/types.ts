@@ -14,13 +14,9 @@ export interface SiteDataProps {
   phone: string;
   email: string;
   socials: {
-    facebook: string;
-    instagram: string;
-  };
-  // availableSocials: {
-  //   label: string;
-  //   href: string;
-  // }[];
+    label: string;
+    href: string;
+  }[];
   openingHours: {
     weekdays: string;
     weekends: string;

@@ -7,10 +7,16 @@ export const PageData: PageDataProps = {
     address: "ul. Portowa 7, 70-000 Szczecin",
     phone: "+48 600 987 654",
     email: "kontakt@fightcorner.pl",
-    socials: {
-      facebook: "https://facebook.com/szczecinfightcorner",
-      instagram: "https://instagram.com/szczecinfightcorner",
-    },
+    socials: [
+      {
+        label: "Facebook",
+        href: "https://facebook.com/szczecinfightcorner",
+      },
+      {
+        label: "Instagram",
+        href: "https://instagram.com/szczecinfightcorner",
+      },
+    ],
     // availableSocials: [
     //   {
     //     label: "Facebook",

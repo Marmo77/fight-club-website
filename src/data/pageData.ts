@@ -11,16 +11,16 @@ export const PageData: PageDataProps = {
       facebook: "https://facebook.com/szczecinfightcorner",
       instagram: "https://instagram.com/szczecinfightcorner",
     },
-    availableSocials: [
-      {
-        label: "Facebook",
-        href: "https://facebook.com/szczecinfightcorner",
-      },
-      {
-        label: "Instagram",
-        href: "https://instagram.com/szczecinfightcorner",
-      },
-    ],
+    // availableSocials: [
+    //   {
+    //     label: "Facebook",
+    //     href: "https://facebook.com/szczecinfightcorner",
+    //   },
+    //   {
+    //     label: "Instagram",
+    //     href: "https://instagram.com/szczecinfightcorner",
+    //   },
+    // ],
     openingHours: {
       weekdays: "PON-PT: 16:30-20:30",
       weekends: "SOB-NDZ: Nieczynne",

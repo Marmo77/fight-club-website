@@ -17,10 +17,10 @@ export interface SiteDataProps {
     facebook: string;
     instagram: string;
   };
-  availableSocials: {
-    label: string;
-    href: string;
-  }[];
+  // availableSocials: {
+  //   label: string;
+  //   href: string;
+  // }[];
   openingHours: {
     weekdays: string;
     weekends: string;

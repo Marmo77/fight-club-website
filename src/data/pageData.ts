@@ -22,8 +22,8 @@ export const PageData: PageDataProps = {
     //   },
     // ],
     openingHours: {
-      weekdays: "PON-PT: 16:30-20:30",
-      weekends: "SOB-NDZ: Nieczynne",
+      weekdays: "Pon-Pt: 16:30-20:30",
+      weekends: "Sob-Ndz: Nieczynne",
     },
   },
   navigation: {

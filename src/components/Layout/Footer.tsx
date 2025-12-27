@@ -16,23 +16,23 @@ const Footer = () => {
             </div>
           </div>
           {/* Contact */}
-          <div className="">
-            <h4 className="font-bold text-sm leading-6 tracking-wide text-primary">
-              Kontakt
-            </h4>
-          </div>
+          <FooterSection
+            title="Kontakt"
+            content={[site.address, site.phone, site.email]}
+            type="contact"
+          />
           {/* Opening Hours */}
-          <div className="">
-            <h4 className="font-bold text-sm leading-6 tracking-wide text-primary">
-              Godziny Otwarica
-            </h4>
-          </div>
+          <FooterSection
+            title="Godziny Otwarcia"
+            content={[site.openingHours.weekdays, site.openingHours.weekends]}
+            type="openingHours"
+          />
           {/* Socials */}
-          <div className="">
-            <h4 className="font-bold text-sm leading-6 tracking-wide text-primary">
-              Socials
-            </h4>
-          </div>
+          <FooterSection
+            title="Social Media"
+            content={[site.socials.facebook, site.socials.instagram]}
+            type="socials"
+          />
         </div>
       </div>
       <div className="">
@@ -40,6 +40,81 @@ const Footer = () => {
         <div className="text-right"></div>
       </div>
     </footer>
+  );
+};
+
+const FooterSection = ({
+  title,
+  content,
+  type,
+}: {
+  title: string;
+  content: string[];
+  type: "contact" | "openingHours" | "socials";
+}) => {
+  const prefix = (item: string) => {
+    if (item.includes("+")) return `tel:${item}`;
+    if (item.includes("@")) return `mailto:${item}`;
+    return "";
+  };
+  return (
+    <div className="flex flex-col justify-start gap-0.5">
+      <h4 className="font-extrabold text-[13px] leading-6 tracking-wide text-primary">
+        {title}
+      </h4>
+      {type === "contact" && (
+        <div className="flex flex-col text-xs pl-1 gap-0.5 text-muted-foreground">
+          {content.map((item, index) => (
+            <a
+              key={index}
+              href={prefix(item)}
+              className="flex gap-1 text-primary-foreground font-semibold"
+            >
+              <span>
+                {item.includes("+")
+                  ? "Telefon:"
+                  : item.includes("@")
+                  ? "Email:"
+                  : "Adres:"}
+              </span>
+              <span className="text-muted-foreground hover:text-primary duration-500 transition-colors cursor-pointer font-medium">
+                {item}
+              </span>
+            </a>
+          ))}
+        </div>
+      )}
+      {type === "openingHours" && (
+        <div className="flex flex-col text-xs pl-1 text-muted-foreground">
+          {content.map((item, index) => (
+            <p
+              key={index}
+              className="flex gap-1 text-primary-foreground font-semibold"
+            >
+              <span>{item.split(" ")[0]}</span>
+              <span className="text-muted-foreground hover:text-primary duration-500 transition-colors cursor-pointer font-medium">
+                {item.split(" ")[1]}
+              </span>
+            </p>
+          ))}
+        </div>
+      )}
+      {type === "socials" && (
+        <div className="flex flex-col text-xs pl-1 text-muted-foreground">
+          {content.map((item, index) => (
+            <p
+              key={index}
+              className="flex gap-1 text-primary-foreground font-semibold"
+            >
+              <span>{item.split(" ")[0]}</span>
+              <span className="text-muted-foreground hover:text-primary duration-500 transition-colors cursor-pointer font-medium">
+                {item.split(" ")[1]}
+              </span>
+            </p>
+          ))}
+        </div>
+      )}
+    </div>
   );
 };
 

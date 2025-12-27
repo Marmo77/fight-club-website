@@ -2,18 +2,34 @@ import type { PageDataProps, ScheduleData } from "@/types/types";
 
 export const PageData: PageDataProps = {
   site: {
-    name: "TAURUS SZCZECIN",
-    city: "SZCZECIN",
+    name: "Taurus Szczecin",
+    city: "Szczecin",
     address: "ul. Portowa 7, 70-000 Szczecin",
     phone: "+48 600 987 654",
     email: "kontakt@fightcorner.pl",
-    socials: {
-      facebook: "https://facebook.com/szczecinfightcorner",
-      instagram: "https://instagram.com/szczecinfightcorner",
-    },
+    socials: [
+      {
+        label: "Facebook",
+        href: "https://facebook.com/szczecinfightcorner",
+      },
+      {
+        label: "Instagram",
+        href: "https://instagram.com/szczecinfightcorner",
+      },
+    ],
+    // availableSocials: [
+    //   {
+    //     label: "Facebook",
+    //     href: "https://facebook.com/szczecinfightcorner",
+    //   },
+    //   {
+    //     label: "Instagram",
+    //     href: "https://instagram.com/szczecinfightcorner",
+    //   },
+    // ],
     openingHours: {
-      weekdays: "PON-PT: 16:30-20:30",
-      weekends: "SOB-NDZ: Nieczynne",
+      weekdays: "Pon-Pt: 16:30-20:30",
+      weekends: "Sob-Ndz: Nieczynne",
     },
   },
   navigation: {

@@ -12,15 +12,18 @@ const Footer = () => {
   }));
   return (
     <footer id="footer" className="border-t border-border mt-4 pt-2">
-      <div className="container py-14 px-8 md:px-16 mx-auto text-left">
-        <div className="flex max-w-7xl justify-between space-x-4">
+      <div className="container py-14 px-8 lg:px-16 mx-auto text-left">
+        <div className="flex max-w-7xl mx-auto flex-col md:flex-row md:justify-between justify-center items-center">
           {/* Basic Info */}
-          <div className="">
-            <div className="font-semibold font-heading flex gap-2 uppercase text-xl mb-2">
+          <div className="text-center md:text-left md:block flex flex-col items-center">
+            <div className="font-bold font-heading flex gap-2 uppercase text-xl mb-2">
               <span className="text-primary">{site.name.split(" ")[0]}</span>
               <span className="text-primary-foreground">
                 {site.name.split(" ")[1]}
               </span>
+            </div>
+            <div className="text-xs text-muted-foreground max-w-[250px]">
+              {site.description}
             </div>
           </div>
           {/* Contact */}
@@ -43,7 +46,7 @@ const Footer = () => {
           />
         </div>
       </div>
-      <div className="container mx-auto flex justify-between border-t border-border px-8 md:px-16 py-4 text-[11px] font-medium text-muted-foreground">
+      <div className="container mx-auto flex md:flex-row flex-col items-center gap-2 md:items-start md:gap-0 justify-between border-t border-border px-8 md:px-16 py-4 text-[11px] font-medium text-muted-foreground">
         <p className="text-left">
           © {new Date().getFullYear()} {site.name}. Wszelkie prawa zastrzeżone.
         </p>
@@ -81,17 +84,17 @@ const FooterSection = ({
     return "";
   };
   return (
-    <div className="flex flex-col justify-start gap-0.5">
-      <h4 className="font-extrabold text-[13px] leading-6 tracking-wide text-primary">
+    <div className="flex flex-col gap-0.5 md:self-start">
+      <h4 className="font-extrabold text-[13px] text-center md:text-left leading-6 tracking-wide text-primary">
         {title}
       </h4>
       {type === "contact" && (
-        <div className="flex flex-col text-xs pl-1 gap-0.5 text-muted-foreground">
+        <div className="flex flex-col text-center md:text-left text-xs gap-0.5 text-muted-foreground">
           {(content as string[]).map((item, index) => (
             <a
               key={index}
               href={prefix(item)}
-              className="flex gap-1 text-primary-foreground font-semibold"
+              className="flex gap-1 md:justify-start justify-center text-primary-foreground font-semibold"
             >
               <span>
                 {item.includes("+")
@@ -108,7 +111,7 @@ const FooterSection = ({
         </div>
       )}
       {type === "openingHours" && (
-        <div className="flex flex-col text-xs pl-1 text-muted-foreground">
+        <div className="flex flex-col text-center md:text-left text-xs text-muted-foreground">
           {(content as string[]).map((item, index) => (
             <p
               key={index}
@@ -123,7 +126,7 @@ const FooterSection = ({
         </div>
       )}
       {type === "socials" && (
-        <div className="flex flex-col items-center text-xs gap-1 pl-1 text-muted-foreground">
+        <div className="flex flex-col items-center text-xs gap-1 text-muted-foreground">
           {(content as SocialsProps[]).map((item, index) => (
             <a
               key={index}

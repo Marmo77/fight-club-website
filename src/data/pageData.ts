@@ -3,6 +3,8 @@ import type { PageDataProps, ScheduleData } from "@/types/types";
 export const PageData: PageDataProps = {
   site: {
     name: "Taurus Szczecin",
+    description:
+      "Twój klub sportów walki w Szczecinie. Stawiamy na technikę, charakter i wzajemny szacunek. Dołącz do naszej ekipy.",
     city: "Szczecin",
     address: "ul. Portowa 7, 70-000 Szczecin",
     phone: "+48 600 987 654",

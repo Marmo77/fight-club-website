@@ -43,9 +43,24 @@ const Footer = () => {
           />
         </div>
       </div>
-      <div className="">
-        <div className="text-left">1</div>
-        <div className="text-right"></div>
+      <div className="container mx-auto flex justify-between border-t border-border px-8 md:px-16 py-4 text-[11px] font-medium text-muted-foreground">
+        <p className="text-left">
+          © {new Date().getFullYear()} {site.name}. Wszelkie prawa zastrzeżone.
+        </p>
+        <div className="text-right flex gap-3">
+          <a
+            href="#"
+            className="hover:text-primary duration-300 transition-colors"
+          >
+            Polityka Prywatności
+          </a>
+          <a
+            href="#"
+            className="hover:text-primary duration-300 transition-colors"
+          >
+            Regulamin Klubu
+          </a>
+        </div>
       </div>
     </footer>
   );

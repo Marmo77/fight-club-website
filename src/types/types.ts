@@ -9,6 +9,7 @@ export interface HeroDataProps {
 }
 export interface SiteDataProps {
   name: string;
+  description: string;
   city: string;
   address: string;
   phone: string;

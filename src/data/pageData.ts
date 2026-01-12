@@ -82,6 +82,37 @@ export const PageData: PageDataProps = {
       firstTraining: "Pierwszy trening za darmo",
     },
   },
+  pricing: {
+    title: "Cennik Karnetów",
+    info: "Każdy karnet dotyczy wyłącznie jednej wybranej filii klubu oraz jednej dyscypliny sportowej. Boks i Kickboxing to oddzielne programy treningowe. ",
+    prices: [
+      {
+        title: "Pierwszy trening",
+        price: 0,
+        description: "Zapoznawczy",
+      },
+      {
+        title: "Miesięczny Karnet",
+        price: 150,
+        description: "Nielimitowane",
+      },
+      {
+        title: "Zajęcia Funkcjonalne",
+        price: 30,
+        description: "Pojedyncze",
+      },
+      {
+        title: "Trening Pojedynczy",
+        price: 35,
+        description: "Jednorazowe",
+      },
+      {
+        title: "Trening Personalny",
+        price: 120,
+        description: "Indywidualny",
+      },
+    ],
+  },
   trainers: [
     // {
     //   id: 1,

@@ -3,6 +3,7 @@ import Test from "../Test";
 import Trainers from "./Trainers";
 import Schedule from "./Schedule";
 import Pricing from "./Pricing";
+import Location from "./Location";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Trainers />
       <Schedule />
       <Pricing />
+      <Location />
       <Test />
     </section>
   );

@@ -48,12 +48,22 @@ export interface TrainerProps {
     email: string;
   };
 }
+export interface PricingProps {
+  title: string;
+  info: string;
+  prices: {
+    title: string;
+    price: number;
+    description: string;
+  }[];
+}
 
 export interface PageDataProps {
   site: SiteDataProps;
   hero: HeroDataProps;
   navigation: NavigationDataProps;
   trainers: TrainerProps[];
+  pricing: PricingProps;
 }
 
 // SCHEDULES

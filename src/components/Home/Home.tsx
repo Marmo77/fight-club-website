@@ -2,6 +2,7 @@ import Hero from "./Hero";
 import Test from "../Test";
 import Trainers from "./Trainers";
 import Schedule from "./Schedule";
+import Pricing from "./Pricing";
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
       <Hero />
       <Trainers />
       <Schedule />
+      <Pricing />
       <Test />
     </section>
   );

@@ -1,4 +1,11 @@
 import type { PageDataProps, ScheduleData } from "@/types/types";
+import {
+  Car,
+  LightbulbIcon,
+  ParkingSquare,
+  Shield,
+  UsersIcon,
+} from "lucide-react";
 
 export const PageData: PageDataProps = {
   site: {
@@ -183,6 +190,61 @@ export const PageData: PageDataProps = {
         "15 lat doświadczenia",
       ],
       contact: { phone: "+48 600 111 222", email: "martyna@fightcorner.pl" },
+    },
+  ],
+  locations: [
+    {
+      name: "Szczecin",
+      address: "Marii Konopnickiej 34, 72-100 Goleniów",
+      googleMapLink:
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2786.424189947786!2d14.828660076957789!3d53.5604603586811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47009f7caafdd27f%3A0x1d68067c81da215a!2sKlub%20Bokserski%20Taurus!5e1!3m2!1spl!2spl!4v1769360372451!5m2!1spl!2spl",
+      description:
+        "Nasza główna salka w centrum Goleniowa. Profesjonalne wyposażenie, ring, strefa z workami.",
+      assets: [
+        {
+          icon: ParkingSquare,
+          text: "Parking pod salą",
+        },
+        {
+          icon: LightbulbIcon,
+          text: "Sprzęt na miejscu",
+        },
+
+        {
+          icon: Shield,
+          text: "Miła atmosfera",
+        },
+        {
+          icon: UsersIcon,
+          text: "Profesjonalni trenerzy",
+        },
+      ],
+    },
+    {
+      name: "Maszewo",
+      address: "ul. Portowa 12, 70-040 Maszewo",
+      googleMapLink:
+        "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d246.65924831452926!2d15.061484937729327!3d53.4965692834062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1spl!2spl!4v1769359485507!5m2!1spl!2spl",
+      description:
+        "Nasza filia w Maszewo. Profesjonalne wyposażenie, ring, strefa z workami. Dużo miejsca do treningu.",
+      assets: [
+        {
+          icon: Car,
+          text: "Darmowy parking pod salą",
+        },
+        {
+          icon: Shield,
+          text: "Miła atmosfera",
+        },
+        {
+          icon: UsersIcon,
+          text: "Profesjonalni trenerzy",
+        },
+        {
+          icon: Shield,
+          text: "Mocny wycisk",
+        },
+      ],
     },
   ],
 };

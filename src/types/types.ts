@@ -64,6 +64,7 @@ export interface PageDataProps {
   navigation: NavigationDataProps;
   trainers: TrainerProps[];
   pricing: PricingProps;
+  locations: Location[];
 }
 
 // SCHEDULES
@@ -75,6 +76,17 @@ export interface GroupSchedule {
 export interface DaySchedule {
   title: string;
   groups: GroupSchedule[];
+}
+
+export interface Location {
+  name: string;
+  address: string;
+  googleMapLink: string;
+  description: string;
+  assets: {
+    icon: any;
+    text: string;
+  }[];
 }
 
 export type ScheduleData = DaySchedule[];
